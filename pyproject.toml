@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "dsa-assistant"
+version = "0.1.0"
+description = "An assistant to help you with DSA."
+authors = ["Soumik Acharjee <acharjee266@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+crewai = {extras = ["tools"], version = "^0.41.1"}
+python-dotenv = "^1.0.1"
+crewai-tools = "^0.4.6"
+
+[tool.poetry.scripts]
+match_to_proposal = "latex_resume_creator.main:run"
+train = "latex_resume_creator.main:train"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
